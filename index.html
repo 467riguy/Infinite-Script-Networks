@@ -321,6 +321,83 @@ body {
       text-align: center;
       margin-top: 80px;
     }
+
+     <!--Scripts-->
+   <script src="./assets/script.js" defer></script>
+   <script src="./uv/uv.bundle.js"></script>
+   <script src="./uv/uv.config.js"></script>
+   <script src="./assets/register-sw.js"></script>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+
+    document.getElementById("searchInput").addEventListener("input", function () {
+      let filter = this.value.toLowerCase();
+      let games = document.querySelectorAll(".game-button");
+
+      games.forEach(game => {
+        let name = game.querySelector(".game-name").textContent.toLowerCase();
+        game.style.display = name.includes(filter) ? "block" : "none";
+      });
+    });
+
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 100,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#d6a72a" 
+        },
+        shape: {
+          type: "circle",
+        },
+        opacity: {
+          value: 0.5,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 3,
+            size_min: 0.2,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ff3131",
+          opacity: 0.5,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      retina_detect: true
+    });
+  </script>
 </body>
 
 </html>
