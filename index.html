@@ -214,7 +214,7 @@ body {
       document.getElementById('navMenu').classList.toggle('active');
     }
 
-    document.getElementById("searchInput").addEventListener("input", function () {
+    document.getElementById("searchSubmit").addEventListener("submit", function () {
       let filter = this.value.toLowerCase();
       let games = document.querySelectorAll(".game-button");
 
