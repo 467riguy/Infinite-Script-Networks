@@ -34,7 +34,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Ind=Infinite Script | Home</title>
+        <title>Infinite Script | Home</title>
         <meta name="description" content="A Delusions production" />
         <link rel="shortcut icon" href="/emerald.png" type="image/png" />
       </Head>
