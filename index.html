@@ -1,301 +1,109 @@
 <!DOCTYPE html>
-<html lang="en"> 
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infinite Script</title>
-  <link rel="icon" href="assets/infinitescript.png" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap"
-    rel="stylesheet">
-    <style>
-        * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'IBM Plex Sans', sans-serif;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #4B0082;
-  color: #ffffff;
-  overflow: hidden;
-}
-
-.container {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 15px;
-  padding: 40px;
-  width: 90%;
-  max-width: 500px;
-  text-align: center;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.container:hover {
-  transform: scale(1.02);
-}
-
-.header {
-  font-size: 2rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #ff7eb3, #ff758c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
-}
-
-.input {
-  width: 100%;
-  padding: 12px 16px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  transition: 0.3s ease;
-  margin-bottom: 15px;
-}
-
-.input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.input:focus {
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-}
-
-.doc-button {
-  padding: 12px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  color: white;
-  background: linear-gradient(90deg, #ff3131, #ff758c);
-  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.doc-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(255, 0, 0, 0.7);
-}
-
-.doc-button:active {
-  transform: scale(0.95);
-}
-
-#particles-js {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: purple; 
-  z-index: -1;
-}
-    </style>
-
-   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apps - Infinite Script</title>
-  <link rel="icon" href="assets/infinitescript.png" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'IBM Plex Sans', sans-serif;
-    }
-    
-    .nav-button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: none;
-      font-size: 1.8rem;
-      color: white;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .nav-button:hover {
-      transform: scale(1.1);
-    }
-
-    .nav-menu {
-      position: fixed;
-      top: 0;
-      right: -250px;
-      width: 250px;
-      height: 100vh;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding-top: 60px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      transition: right 0.3s ease-in-out;
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-menu.active {
-      right: 0;
-    }
-
-    .nav-menu a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .nav-menu a:hover {
-      color: #ff758c;
-    }
-
-    .close-button {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: white;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .close-button:hover {
-      transform: scale(1.1);
-    }
-  </style>
+<title>Infinite Script || Search</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="title" content="Ghost" />
+<meta name="theme-color" content="#e9a40e" />
+<meta name="description" content="A Pretty Spooky Site >:D" />
+<link rel="icon" id="favicon" href="/assets/img/Ghost.png" type="image/x-icon">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,1,0">
+<link rel="stylesheet" href="/assets/styles.css" />
+<script src="/assets/js/cosmos.js?v=24&ye=1"></script>
+<script src="/assets/js/theory.js?vr=2.3.3&title=bigbang"></script>
+<script src="/assets/astro.js?skid=true"></script>
+<script src="/u/space.js?id=10292" defer></script>
+<script src="/u/liftoff.js?skib=idi" defer></script>
+<script src="/assets/js/galaxy.js?disc=false&num=24" crossorigin="anonymous"></script>
 </head>
-
 <body>
+    <script type='text/javascript' id="ads2" src='//pl25533607.profitablecpmrate.com/d2/c0/09/d2c00916f17b63e473989f767d1082ff.js'></script>
+    <script async="async" id="ads1" data-cfasync="false" src="//pl25527333.profitablecpmrate.com/d00b3b529c7e75cacbb98e16680c5373/invoke.js"></script>
+<!--SKIDDDDDDDDD-->
+<center>
+    <nav class="navbar" id="nav">
+   </center>
+<br>
 
-  <div id="particles-js"></div>
+        <p align="center" class="ex2"><img id="logo2" src="/assets/img/ghost.png" height="200"></p>
+        <center>
+<!--Title shit lol-->
+            <p class="ex3">Ghost Sea<span>rch</span></p>
+            <h2><span id="subtitle">...</span></h2>
+            <input type="text" id="input" class="input" placeholder="Search or enter a URL..">
+        </center>
+        <!-- Google tag (gtag.js) need to track dem users-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFWKKRRXLT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-  <button class="nav-button" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-  </button>
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-  <nav class="nav-menu" id="navMenu">
-    <button class="close-button" onclick="toggleMenu()">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-    <a href="games.html"><i class="fa-solid fa-gamepad"></i> Games</a>
-    <a href="apps.html"><i class="fa-brands fa-app-store"></i> Apps</a>
-  </nav>
+            gtag('config', 'G-WFWKKRRXLT');
+        </script>
+        <!--subtitle shit-->
+        <script>
+            function changeSub(num) {
+                document.getElementById("subtitle").innerText = tell[num];
+            }
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('active');
-    }
+            var tell = [
+                "Infinite is a skiddy kid af (who put this)",
+                "What even is that?",
+                "You need help",
+                "C00lKid is crazy",
+                "CoolOnlineGames",
+                "ur funny",
+                "LOL",
+                "got taken down fr fr",
+                "help me",
+                " go crazy right now",
+                "made by a student (crazy right)",
+                "i got a glock in my rari",
+                "gren",
+                "corruptedgaming.online",
+                "griddy",
+                "im kanye west",
+                "David is the best",
+                "LeBron on crack!",
+                "unblockers go crazy rn!",
+                "76.138.200.152 (your ip)",
+                "Free for all",
+                "A wise man once told me to use Ghost",
+                "HI LEBRON",
+                "I Code Cool Stuff :D",
+                "Jordan was here 😱 (creator of jordansmathwork)",
+                "You were skidded - Clocked",
+                "JMW is cool",
+                "cube gang",
+                "blanket????",
+                "this is the rarest one (real)",
+                "NO THIS IS THE RAREST ONE!!!",
+                "how many of these are there????",
+                "Thanks to PBS Kids for the code!",
+                "hes not real (dont trust him)",
+                "I WONDER???",
+                "Get on my level!",
+                "skill issue",
+                "not my fault",
+                "the skiddiest site youve ever seen"
+            ];
 
-    document.getElementById("searchSubmit").addEventListener("submit", function () {
-      let filter = this.value.toLowerCase();
-      let games = document.querySelectorAll(".game-button");
+            var howmany = tell.length;
+            var randomIndex = Math.floor(Math.random() * howmany);
 
-      games.forEach(game => {
-        let name = game.querySelector(".game-name").textContent.toLowerCase();
-        game.style.display = name.includes(filter) ? "block" : "none";
-      });
-    });
+            document.getElementById("subtitle").innerText = tell[randomIndex];
 
-    particlesJS("particles-js", {
-      particles: {
-        number: {
-          value: 100,
-          density: {
-            enable: true,
-            value_area: 800
-          }
-        },
-        color: {
-          value: "#d6a72a" 
-        },
-        shape: {
-          type: "circle",
-        },
-        opacity: {
-          value: 0.5,
-          random: true,
-          anim: {
-            enable: true,
-            speed: 1,
-            opacity_min: 0.1,
-            sync: false
-          }
-        },
-        size: {
-          value: 3,
-          random: true,
-          anim: {
-            enable: true,
-            speed: 3,
-            size_min: 0.2,
-            sync: false
-          }
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#ff3131",
-          opacity: 0.5,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out",
-          bounce: false
-        }
-      },
-      retina_detect: true
-    });
-  </script>
-</head>
-
-<div id="particles-js"></div>
-
-<body>
-  <div class="container">
-    <h1 class="header">
-      Infinite Script
-    </h1>
-  <h2 class="header">
-    One of the best Proxys
-  </h2>
-    <input type="text" class="input" placeholder="Search freely...">
-    <button class="doc-button" onclick="window.open('https://docs.google.com/document/d/13g_cjZzYWBLhlc0B1tpYDwsUpnUOOh_YuWwtF2UBaxA/edit?tab=t.0#heading=h.44ohj7tp8hlq', '_blank')">Link to My Docs</button>
-  </div>
-
-
+            function changeSplash(num) {
+                var sub = "guh " + num + ", " + tell[num];
+                document.getElementById("subtitle").innerText = tell[num];
+                return sub;
+            }
+        </script>
+        <div id="container-d00b3b529c7e75cacbb98e16680c5373"></div>
 </body>
 
 </html>
